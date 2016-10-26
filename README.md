@@ -1,7 +1,7 @@
 # node-fifo-example
 
-Run with `node index.js`
+Run with `npm start`
 
-One node.js process will create a FIFO, and log out any data written to it. The second node.js process will write to it once a second.
+One node.js process will create a named pipe/FIFO, and log out any data written to it. The second node.js process will write to it once a second. A bash script and a C++ program will also write to it once. Look at `index.js` to see what's going on.
 
-Other processes can write to the FIFO too. For example, from Bash you can run `echo "Hello from bash" >> ./testfifo`, and you'll see that logged out as well. 
+This only works on macOS.

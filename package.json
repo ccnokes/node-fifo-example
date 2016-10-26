@@ -1,0 +1,19 @@
+{
+  "name": "node-fifo-example",
+  "version": "1.0.0",
+  "description": "Basic example of interprocess communication using named pipes or FIFO",
+  "main": "index.js",
+  "scripts": {
+    "start": "g++ hello.cpp -o hello && node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ccnokes/node-fifo-example.git"
+  },
+  "author": "Cameron Nokes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ccnokes/node-fifo-example/issues"
+  },
+  "homepage": "https://github.com/ccnokes/node-fifo-example#readme"
+}

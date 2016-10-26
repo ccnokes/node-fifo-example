@@ -13,6 +13,17 @@ fifo.on('exit', function(status) {
   // start separate node.js process
   fork(require.resolve('./write-to-fifo'));
 
+  // get a hello from C++
+  setTimeout(() => {
+    spawn('./hello');
+  }, 1500);
+
+  // get a hello from bash
+  setTimeout(() => {
+    spawn('./hello.sh');
+  }, 2500);
+
+
   // log out when it's been written to
   fifoRs.on('data', data => {
     console.log(data.toString());

@@ -8,7 +8,9 @@ let fifo = spawn('mkfifo', ['testfifo']);
 // this occurs after fifo is created
 fifo.on('exit', function(status) {
 
-  let fifoRs = fs.createReadStream('./testfifo');
+  // have to pass a file descriptor for FIFOs for some reason, file name won't work
+  const fd = fs.openSync('./testfifo', 'r+');
+  let fifoRs = fs.createReadStream(null, { fd });
 
   // start separate node.js process
   fork(require.resolve('./write-to-fifo'));

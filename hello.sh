@@ -1,1 +1,1 @@
-echo "Hello from bash" >> ./testfifo
+echo "Hello $USER, this is bash" >> ./testfifo

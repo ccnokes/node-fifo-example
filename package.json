@@ -1,6 +1,6 @@
 {
   "name": "node-fifo-example",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Basic example of interprocess communication using named pipes or FIFO",
   "main": "index.js",
   "scripts": {
